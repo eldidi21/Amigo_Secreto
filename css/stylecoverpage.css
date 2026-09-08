@@ -67,6 +67,13 @@ section {
   max-width: 600px;
 }
 
+.seleccion {
+  background: linear-gradient(135deg, #6a41bd 0%, #7a54c5 45%, #8b6ec5 100%);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 .seleccion h2 {
   font-size: 1.6rem;
   font-weight: 600;
@@ -86,7 +93,7 @@ footer {
 
 button {
   background-color: #ffffff;
-  color: #3f2f7f;
+  color: #1fc73b;
   border: none;
   border-radius: 999px; /* forma de "pastilla" como el botón Registrarme */
   padding: 14px 40px;
