@@ -1,5 +1,5 @@
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyO_6CeeO26ozRbbBuDOuD9p5iaGBRuuiP0vB41v6ztfP60bKl9E4_2srkaAndIZihT/exec"; // tu URL real
+  "https://script.google.com/macros/s/AKfycbyUH0IwXHI_JMuJ4y73UR6uk-atDDf5V-kaq-Xeq2TJ_UVgePeg8VoGIfUM_A6KBtZnCA/exec"; // tu URL real
 
 const amigoSecreto = document.getElementById("amigosecreto");
 const params = new URLSearchParams(window.location.search);
