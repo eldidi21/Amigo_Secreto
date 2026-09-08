@@ -1,22 +1,28 @@
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyUH0IwXHI_JMuJ4y73UR6uk-atDDf5V-kaq-Xeq2TJ_UVgePeg8VoGIfUM_A6KBtZnCA/exec"; // tu URL real
 
-const amigoSecreto = document.getElementById("amigosecreto");
+const saludo = document.getElementById("saludo");
+const resultadoEl = document.getElementById("resultado");
+const boton = document.getElementById("girar");
+
 const params = new URLSearchParams(window.location.search);
 const persona = params.get("persona");
 
 if (persona) {
-  amigoSecreto.textContent = `Hola ${persona} 👋 Presiona el botón para ver tu amigo secreto`;
+  saludo.innerHTML = `Hola, <span class="nombre">${persona}</span> 👋`;
 } else {
-  amigoSecreto.textContent =
-    "Link inválido, pídele el link correcto a quien organizó el sorteo";
+  saludo.textContent = "Link inválido";
+  document.getElementById("mensaje").textContent =
+    "Pídele el link correcto a quien organizó el sorteo";
+  boton.disabled = true;
 }
 
-if (document.getElementById("girar")) {
-  document.getElementById("girar").addEventListener("click", async function () {
+if (boton) {
+  boton.addEventListener("click", async function () {
     if (!persona) return;
 
-    amigoSecreto.textContent = "Buscando...";
+    boton.textContent = "Buscando...";
+    boton.disabled = true;
 
     try {
       const res = await fetch(
@@ -25,14 +31,18 @@ if (document.getElementById("girar")) {
       const data = await res.json();
 
       if (data.error) {
-        amigoSecreto.textContent =
-          "No encontramos tu nombre, revisa el link 😬";
+        resultadoEl.textContent = "No encontramos tu nombre, revisa el link 😬";
+        boton.textContent = "Ver amigo secreto →";
+        boton.disabled = false;
         return;
       }
 
-      amigoSecreto.textContent = "Tu amigo secreto es: " + data.resultado;
+      resultadoEl.textContent = "🎉 Tu amigo secreto es: " + data.resultado;
+      boton.style.display = "none";
     } catch (err) {
-      amigoSecreto.textContent = "Hubo un error, intenta de nuevo";
+      resultadoEl.textContent = "Hubo un error, intenta de nuevo";
+      boton.textContent = "Ver amigo secreto →";
+      boton.disabled = false;
     }
   });
 }

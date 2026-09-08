@@ -1,27 +1,97 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amigo Secreto Betowa</title>
+    <title>Amigo secreto Betowa</title>
     <link rel="stylesheet" href="css/stylecoverpage.css" />
   </head>
   <body>
-    <header>
-      <h1>Amigo secreto Betowa</h1>
-    </header>
-    <main>
-      <section>
-        <div class="seleccion">
-          <h2 id="amigosecreto"></h2>
+    <div class="fondo-decorado">
+      <header>
+        <h1>Amigo secreto <span class="resaltado">Betowa</span></h1>
+        <div class="divisor">
+          <span class="linea"></span>
+          <span class="icono-regalo">🎁</span>
+          <span class="linea"></span>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="button1">
-        <button id="girar">Buscar Amigo Secreto</button>
-      </div>
-    </footer>
+        <p class="subtitulo">PEQUEÑOS DETALLES, GRANDES CONEXIONES</p>
+      </header>
+
+      <main>
+        <div class="tarjeta">
+          <div class="ilustracion">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="35"
+                y="80"
+                width="130"
+                height="95"
+                rx="10"
+                fill="#ffffff"
+                stroke="#d8d3f5"
+                stroke-width="2"
+              />
+              <rect x="35" y="80" width="130" height="30" fill="#f3f1fd" />
+              <rect x="90" y="80" width="20" height="95" fill="#6c4fe0" />
+              <rect x="35" y="95" width="130" height="15" fill="#6c4fe0" />
+              <path
+                d="M100 80 C70 40, 40 50, 55 75 C65 90, 90 85, 100 80Z"
+                fill="none"
+                stroke="#6c4fe0"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <path
+                d="M100 80 C130 40, 160 50, 145 75 C135 90, 110 85, 100 80Z"
+                fill="none"
+                stroke="#6c4fe0"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <circle cx="100" cy="80" r="9" fill="#6c4fe0" />
+              <rect
+                x="118"
+                y="95"
+                width="26"
+                height="20"
+                rx="3"
+                fill="#ffffff"
+                stroke="#6c4fe0"
+                stroke-width="2"
+                transform="rotate(15 131 105)"
+              />
+              <path
+                d="M126 100 l4 4 6 -6"
+                stroke="#a78bfa"
+                stroke-width="2"
+                fill="none"
+                transform="rotate(15 131 105)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20 90 l8 8 M180 90 l-8 8 M25 130 l6 -6"
+                stroke="#c4b5fd"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div class="separador"></div>
+
+          <div class="contenido">
+            <h2 id="saludo">Hola 👋</h2>
+            <p id="mensaje">Llegó el momento de conocer tu amigo secreto</p>
+            <div id="resultado" class="resultado"></div>
+            <button id="girar">Ver amigo secreto →</button>
+            <p class="nota">🔒 Tu amigo secreto es una sorpresa</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/seleccionpersona.js"></script>
   </body>
-  <script src="js/seleccionpersona.js"></script>
 </html>
