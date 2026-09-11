@@ -29,29 +29,6 @@ body {
   line-height: 1.5;
 }
 
-.texto-arriba {
-  top: 60px;
-  right: 60px;
-  font-style: italic;
-  font-weight: 400;
-  text-align: right;
-}
-
-.texto-izq {
-  bottom: 40px;
-  left: 40px;
-}
-
-.texto-der {
-  bottom: 40px;
-  right: 40px;
-  text-align: right;
-}
-
-.corazon {
-  color: #d8cfff;
-}
-
 header {
   text-align: center;
   margin-bottom: 40px;
